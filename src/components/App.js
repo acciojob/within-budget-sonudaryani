@@ -46,7 +46,7 @@ export default function App() {
       <table>
       {items.map((item) => (
         <tbody className="items">
-          <td>{item.name}</p>
+          <td>{item.name}</td>
           {budget>= item.price ? (<td style={{color: "green"}}>{item.price}</td>) : (<td style={{color: "red"}}>{item.price}</td>)}
         </tbody>
       ))}
