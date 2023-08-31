@@ -40,16 +40,18 @@ export default function App() {
         <b>Enter your budget to check available items:</b>
       </p>
       <input type="number" onChange={(e)=> setBudget(e.target.value)} />
-      <p>
-        <b>Items you can buy are in Green color</b>
-      </p>
       <table>
+      <thead className="headings">
+          <th>Items you can buy are in Green color</th>
+      </thead>
+      <tbody className="items">
       {items.map((item) => (
-        <tbody className="items">
-          <td>{item.name}</td>
-          {budget>= item.price ? (<td style={{color: "green"}}>{item.price}</td>) : (<td style={{color: "red"}}>{item.price}</td>)}
-        </tbody>
+          <tr>
+            <td>{item.name}</td>
+            {budget>= item.price ? (<td style={{color: "green"}}>{item.price}</td>) : (<td style={{color: "red"}}>{item.price}</td>)}
+          </tr>
       ))}
+      </tbody>
       </table>
     </div>
   );
