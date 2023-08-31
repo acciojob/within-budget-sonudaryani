@@ -43,14 +43,14 @@ export default function App() {
       <p>
         <b>Items you can buy are in Green color</b>
       </p>
-      <div>
+      <table>
       {items.map((item) => (
-        <div className="items">
-          <p>{item.name}</p>
-          {budget>= item.price ? (<p style={{color: "green"}}>{item.price}</p>) : (<p style={{color: "red"}}>{item.price}</p>)}
-        </div>
+        <tbody className="items">
+          <td>{item.name}</p>
+          {budget>= item.price ? (<td style={{color: "green"}}>{item.price}</td>) : (<td style={{color: "red"}}>{item.price}</td>)}
+        </tbody>
       ))}
-      </div>
+      </table>
     </div>
   );
 }
